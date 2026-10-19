@@ -24,3 +24,10 @@ C:\Users\User Name\OneDrive\Documents\AltiumLL\
 
 Then confirm file replacement.
 
+
+
+
+
+18-10-26
+
+Line 2413 modified to include "On Error.." because some times the http request fails and stops the script with a user error notification but the fail is not really important.

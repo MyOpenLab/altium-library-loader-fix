@@ -2409,7 +2409,15 @@ Sub ShowImages()
           If chk_Proxy.Checked Then
              xHttp.setProxy 2, Trim(txt_Address.Text) & ":" & Trim(txt_Port.Text), ""
           End if
+
+          On Error Resume Next
           xHttp.Send
+          If Err.Number <> 0 Then
+          ' Always clear the error after handling it
+          Err.Clear
+          End If
+
+
           with bStrm
                .type = 1 '//binary
                .open
